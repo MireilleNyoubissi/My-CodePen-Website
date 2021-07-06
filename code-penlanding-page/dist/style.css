@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{  
+  --teal: #008080;
+  --orange: #ffa500;
+  --LightGoldenRodYellow: #FAFAD2;
+  --pink: #ff0066;
+}
+*{
+  box-sizing: border-box;
+}
+body{
+  max-width: 100%;
+  heigth: 100vh;
+  font-family: poppins, verdana, arial;
+  overflow-y: auto;
+  overflow-x: hidden;  
+  margin: 0;
+}
+.header{  
+  background-color: white;  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  height: 20vh;
+  border: 1px solid tranprent;
+  overflow: hidden;    
+}
+.header-img{
+  float: left;  
+}
+.header nav{
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 100%;
+}
+.header ul{ 
+  display: flex;
+  flex-wrap: nowrap;
+  float: right;
+  list-style-type: none;  
+  margin: 0;
+  padding: 0;  
+}
+
+.header a{
+  display: block;
+  text-align: center; 
+  padding: 0 20px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: grey;
+  font-size: 2vw;
+  position: relative;
+  transition: all ease-in-out 250ms;
+}
+.header a::after{
+  content:"";
+  position: absolute;
+  display: block;
+  height: 0.4vh;
+  width: 0;
+  background-color: var(--teal);
+  bottom: -10px;
+}
+.header a:hover::after{
+  width: 80%;
+}
+.header a:hover{
+  color: var(--orange);
+}
+#Our-Work{
+  margin-top: 100px; 
+  background-color: white;
+  max-width: 100%;
+}
+h1{
+  margin: auto;
+  color: var(--teal);  
+  font-weight: bold;
+  font-size: 3vw;
+  text-align: center;
+  padding: 100px;
+  text-shadow: -1px 0  var(--teal), 0 1px  var(--teal), 1px 0  var(--teal), 0 -1px  var(--teal);
+}
+h1 span{
+  color: var(--orange);
+  text-shadow: -1px 0  var(--orange), 0 1px  var(--orange), 1px 0  var(--orange), 0 -1px  var(--orange);
+}
+h1+p{
+  color: grey;
+  text-align: center;
+  padding-bottom: 16px;
+  font-size: 2vw;
+}
+
+.video{
+  display: block;
+  margin: 0 auto 30px auto;
+  width: 40%;
+}
+.form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--LightGoldenRodYellow);
+  height: 20vh;
+  margin-top: 20px;
+}
+.email{
+  height: 8vh;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.5vw;
+  padding: 0 15px;
+}
+.submit{
+  background-color: grey;
+  color: white;  
+}
+.container-wrap{
+  display: flex;
+  justify-content: space-around;
+  
+}
+.box-1{
+background-color: #ff0066;  
+}
+.box-2{
+background-color: #87CEEB;   
+}
+.box-3{
+background-color: #FFA500;
+  
+}
+.container{
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 2;
+  border-radius: 8px;
+  box-shadow:2px 2px 2px rgba(0,0,0,0.3);
+  padding: 10px;
+}
+.container span{
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  font-family: calibri;
+  font-weight: bold;
+  color: grey;
+  background-color: #ffffff;
+}
+.container a{
+  text-shadow: -1px 0  grey, 0 1px  grey, 1px 0  grey, 0 -1px  grey;
+  text-decoration: none;
+  color: grey; 
+}
+.container p{
+  line-height: normal;
+  font-family: calibri;
+}
+.container button{
+  background-color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  color: #333;
+  padding: 4px;
+  font-family: calibri;
+}
+.service-section{  
+  background-color: var(--LightGoldenRodYellow);
+  max-width: 100%;
+  min-height: 60vh;
+}
+
+.social-icons{
+  background-color: var(--LightGoldenRodYellow); 
+  height: 20vh;
+  line-height: 20vh;
+  text-align: center;
+}
+.social-icons a{
+  color: grey;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  margin-left: 5px;
+  transition:all ease 0.5s;
+}
+.social-icons a:hover{
+	background-color:#333;
+  color: #ffffff;
+	box-shadow:2px 2px 12px rgba(0,0,0,0.2);	
+}
+.link {
+  color: mediumblue;  
+  text-decoration: none;
+}
+.link:visited {
+  color: darkblue
+    ;  
+  text-decoration: none;
+}
+.link:hover {
+  color: blue;  
+  text-decoration: underline;
+}
+
+@media screen and (max-width:500px){  
+  .video{
+    max-width: 100%;
+    height: auto;
+  }
+ .container{
+   margin: 10px 0;
+   line-height: 1;
+   padding: 0;
+   
+}
+.container-wrap{
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between; 
+} 
+}
